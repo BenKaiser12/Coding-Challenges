@@ -1,6 +1,16 @@
 // Global Variables
+var cols;
+var rows;
 var grid = [];
 var current;
+
+function make2DArray(cols, rows) {
+  var arr = new Array(rows);
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = new Array(cols);
+  }
+  return arr;
+}
 
 function setup() {
   var canvas = createCanvas(1000, 700);
@@ -8,24 +18,26 @@ function setup() {
 
   // Setup Grid
   w = 25;
-  var rows = height / w;
-  var cols = width / w;
+  var rows = floor(height / w);
+  var cols = floor(width / w);
+  grid = make2DArray(cols, rows);
   for (var j = 0; j < rows; j++) {
     for (var i = 0; i < cols; i++) {
-      var cell = new Cell(i, j, w);
-      grid.push(cell);
+      grid[j][i] = new Cell(j, i, w);
     }
   }
 
   // Set Start Cell to visited
-  current = grid[0];
+  current = grid[0][0];
   current.visited = true;
 }
 
 function draw() {
   background(51);
 
-  for (var i = 0; i < grid.length; i++) {
-    grid[i].show();
+  for (var j = 0; j < rows; j++) {
+    for (var i = 0; i < cols; i++) {
+      grid[j][i].show();
+    }
   }
 }

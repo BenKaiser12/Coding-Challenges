@@ -14,10 +14,19 @@ class Cell {
 
     stroke(255);
     strokeWeight(2);
-    line(x, y, x + w, y);
-    line(x + w, y, x + w, y + w);
-    line(x + w, y + w, x, y + w);
-    line(x, y + w, x, y);
+
+    if (this.walls[0]) {
+      line(x, y, x + w, y);
+    }
+    if (this.walls[1]) {
+      line(x + w, y, x + w, y + w);
+    }
+    if (this.walls[2]) {
+      line(x + w, y + w, x, y + w);
+    }
+    if (this.walls[3]) {
+      line(x, y + w, x, y);
+    }
 
     if (this.visited) {
       fill(255, 0, 255);
