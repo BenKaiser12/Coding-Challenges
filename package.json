@@ -1,0 +1,27 @@
+{
+  "name": "coding-challenges",
+  "version": "1.0.0",
+  "description": "A project that contains all the coding challenges",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "npm": "^6.4.1",
+    "p5": "^0.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenKaiser12/Coding-Challenges.git"
+  },
+  "author": "Ben Kaiser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenKaiser12/Coding-Challenges/issues"
+  },
+  "homepage": "https://github.com/BenKaiser12/Coding-Challenges#readme"
+}
