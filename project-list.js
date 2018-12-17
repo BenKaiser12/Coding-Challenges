@@ -12,4 +12,9 @@ router.get('/sudoku', function(req, res) {
   res.render(__dirname + '/Projects/sudoku/index.html');
 });
 
+// A* Pathfinding
+router.get('/a-star', function(req, res) {
+  res.render(__dirname + '/Projects/A-star/index.html');
+});
+
 module.exports = router;

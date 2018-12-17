@@ -17,13 +17,16 @@ function setup() {
   canvas.parent('mazeBoard');
 
   // Setup Grid
-  w = 25;
-  var rows = floor(height / w);
-  var cols = floor(width / w);
+  w = 100;
+  var rows = height / w;
+  var cols = width / w;
+
   grid = make2DArray(cols, rows);
+
   for (var j = 0; j < rows; j++) {
     for (var i = 0; i < cols; i++) {
-      grid[j][i] = new Cell(j, i, w);
+      grid[i][j] = new Cell(i, j, w);
+      console.log(grid[i][j]);
     }
   }
 
