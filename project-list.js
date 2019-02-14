@@ -17,4 +17,9 @@ router.get('/a-star', function(req, res) {
   res.render(__dirname + '/Projects/A-star/index.html');
 });
 
+// Cardioid
+router.get('/cardioid', function(req, res) {
+  res.render(__dirname + '/Projects/Cardioid/index.html');
+});
+
 module.exports = router;
